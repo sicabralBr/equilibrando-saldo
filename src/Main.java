@@ -1,25 +1,20 @@
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList< String > ativos = new ArrayList < > ();
 
-        //Entrada dos tipos de ativos
-        System.out.println("Informe a quantidade de ativos: ");
-        int quantidadeAtivos = scanner.nextInt();
+        System.out.println("Por favor informar o saldo atual");
+        double saldoAtual = scanner.nextDouble();
+        System.out.println("Por favor informar o valor do depósito");
+        double valorDeposito = scanner.nextDouble();
+        double valorRetirada = scanner.nextDouble();
 
-        // Entrada dos códigos dos ativos
-        for (int i = 0; i <= quantidadeAtivos; i++) {
-            String codigoAtivo = scanner.nextLine();
-            ativos.add(codigoAtivo);
-        }
+        //TODO: Calcular o saldo atualizado de acordo com a descrição deste desafio.
+        saldoAtual =+ valorDeposito;
+        saldoAtual =- valorRetirada;
 
-        //TODO: Ordenar os ativos em ordem alfabética.
-        Collections.sort(ativos);
-
-        //TODO: Imprimir a lista de ativos ordenada, conforme a tabela de exemplos.
-        ativos.forEach(System.out::println);
+        //TODO: Imprimir o a saída de conforme a tabela de exemplos (uma casa decimal).
+        System.out.println("Saldo atualizado na conta: " + saldoAtual);
     }
 }
